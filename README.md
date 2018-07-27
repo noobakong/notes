@@ -8,7 +8,7 @@
 使用MVVM模式来进行开发，只需要对数据M层进行修改就可以了，在Vue开发中，我们应将注意力转移到M层；
 使用MVP模式来开发，代码里会有很多关于DOM的操作，而使用MVVM模式来开发，Dom的操作被极大的简化了，代码量会得到显著的减少；
 
-###2.前端组件化
+### 2.前端组件化
 > 什么是前端组件化？
 > 组件就是页面的一个部分，我们可以把一个页面切分成很多部分，每个部分都可以称为一个组件，合理的拆分组件，可以使复杂的大型开发分成很多小的部分，便于前期开发，也便于后期维护；
 
@@ -47,7 +47,7 @@
 >生命周期函数就是vue实例在某一个时间点会自动执行的函数
 >生命周期函数不放在vue实例的methods中，而是直接放在vue实例中
 
-![Vue生命周期图](https://cn.vuejs.org/images/lifecycle.png "markdown" "width:80%;height:50%")
+ ![Vue生命周期图](https://cn.vuejs.org/images/lifecycle.png)
 
 ```JavaScript
 <body>
@@ -468,7 +468,7 @@
 - **ref同时也可以作用于组件，可以获取组件在页面的引用**
 
 	还是通过举例子来说明问题
-    ```JavaScript
+```JavaScript
   <body>
     <div id="app">
         <counter ref="one" @change="handleChange"></counter>
@@ -505,7 +505,8 @@
         }
     })
 </script>
-    ```
+ ```
+
     问题：以上，定义了一个counter的计数器组件，通过点击使得自己初始为0的number自增加1，此时，我们在页面中引进了两个counter组件，又想在下面的total数据中显示两个组件的number数字之和
 
     实现：
@@ -590,13 +591,13 @@ props是一个数组或对象，父子间传递的所有数据都要作为数组
 >子组件向父组件传值是通过**事件**的方式来进行
 
 	在子组件的执行方法中可以通过$emit绑定事件到父组件
-	```JavaScript
+```JavaScript
 	 methods: {
 	    handleClick:function(){
 		this.$emit('inc',1)
  }
  }
-    ```
+```
 然后在父组件页面的子组件标签中绑定$emit传递的事件
     ```JavaScript
      <counter :count="3" @inc="handleNumChange"></counter>
@@ -703,16 +704,16 @@ props是一个数组或对象，父子间传递的所有数据都要作为数组
 >           })
 >       }
 > ```
-```
+
 > change是3中定义的change，两者要保持一直，msg形参是3中的this.selfcontent
 ------
->**以上，一个非父子组件的传递就通过bus总线/发布订阅者模式的形式得到实现**
+> **以上，一个非父子组件的传递就通过bus总线/发布订阅者模式的形式得到实现**
 
 ### 7.在Vue中使用插槽
 **插槽的使用场景**
 > 我们知道，父组件向子组件传值可以使用props接受消息，但是如果父组件想传给子组件一个dom结构，里面包含着很多文本内容，这是我们如果再使用props来接受父组件的属性数据，也是可以实现的，但是我们的代码质量会降低，这时，我们就可以使用Vue的插槽
 
-​```JavaScript
+```JavaScript
 <body>
     <div id="app">
         <child content='Yooo'>
