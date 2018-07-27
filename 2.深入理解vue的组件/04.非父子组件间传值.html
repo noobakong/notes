@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bus/总线</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <child content="dell"></child>
+        <child content="lee"></child>
+    </div>
+</body>
+<script>
+    Vue.prototype.bus = new Vue()  //给每一个vue实例原型上都添加一个bus new的一个Vue
+
+    Vue.component('child',{
+        data:function(){
+            return{
+                selfContent:this.content
+            }
+        },
+        props:{
+            content:String
+        },
+        template:"<div @click='handleClick'>child-{{selfContent}}</div>",
+        methods:{
+            handleClick:function(){
+                // alert(this.content)  测试
+                this.bus.$emit('change',this.selfContent)  
+            }
+        },
+        mounted:function(){
+            var this_ = this
+            this.bus.$on('change',function(msg){
+                this_.selfContent = msg
+            })
+        }
+    })
+    var vm = new Vue({
+        el:'#app',
+
+    })
+</script>
+</html>

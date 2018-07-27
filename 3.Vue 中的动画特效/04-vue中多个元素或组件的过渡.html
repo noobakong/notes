@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue中的Js动画与velocity.js</title>
+    <script src="vue.js"></script>
+    <link rel="stylesheet" href="animate.css">
+    <style>
+        .fade-enter,
+        .fade-leave-to{
+            opacity: 0;
+        }
+        .fade-enter-active,
+        .fade-leave-active{
+            transition:opacity 1s; 
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <transition
+            mode="in-out"
+            name="fade"            
+        >
+        <component :is="type"></component>
+        </transition>
+        <button @click="handleClick">切换</button>
+    </div>
+
+    <script>
+        Vue.component('child',{
+            template:'<div>i am a child</div>'
+        })
+        Vue.component('child-one',{
+            template:'<div>i am a childone</div>'
+        })
+        var vm = new Vue({
+            el:'#root',
+            data:{
+                type:"child"
+            },
+            methods: {
+               handleClick: function () {
+                    this.type = this.type === 'child'? 'child-one':'child'
+                },
+            }
+        })
+    </script>
+</body>
+</html>

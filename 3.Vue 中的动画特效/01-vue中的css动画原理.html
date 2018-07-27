@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+    <style>
+        .fade-enter,
+        .fade-leave-to{
+            opacity: 0;
+        }
+        .fade-enter-active,
+        .fade-leave-active{
+            transition: opacity 3s;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="root">
+        <transition name="fade">
+        <div v-if="show">hello vue</div>
+        </transition>
+        <!-- 
+            我们想要增加动画效果，可以把要实现动画的内容用transiton标签包裹起来 可以给标签起一个任意的name值
+            原理：
+            进入动画：
+            1.动画执行前会向trans标签包裹的div上增加fade-enter 和 fade-enter-active
+              当动画运行之前一直到开始运行第一帧的时候，fade-enter 和 fade-enter-active的样式作用在页面上
+            2.当动画开始运行的时候 fade-enter这个样式类就会被vue移除
+            3.当进入动画效果结束的时候，fade-enter-active和fade-enter-to 都被vue删除
+
+            离开动画：
+            1.动画刚离开的一瞬间 fade-leave 和 fade-leave-active 作用在 div元素上
+            2.当离开动画开始执行的时候，fade-leave被vue抹除，又添加上了fade-leave-to的属性 
+            3.最后当动画执行完毕的时候，fade-leave-active和fade-leave-to都被删除掉
+            
+            以上的类中的fade是因为trans标签中定义的name名字为fade，当没有制定名字的时候默认为 v
+         -->
+        <button @click="handleClick">切换</button>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:'#root',
+            data:{
+                show:true
+            },
+            methods: {
+                handleClick:function(){
+                    this.show = !this.show
+                }
+            }
+        })
+    </script>
+</body>
+</html>

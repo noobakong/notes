@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>构建vue实例</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        {{name}} 
+        <div v-text="name + 'Yooo'"></div>   
+        <!-- 以上两种效果相同 -->
+        <div v-html="name"></div>
+        <!-- 三个语法中都可以加入js表达式 -->
+    </div>
+</body> 
+<script>
+    var vm = new Vue({
+        el: '#root',
+        data:{
+            name:'akong'
+        }
+    })
+</script>
+
+</html>

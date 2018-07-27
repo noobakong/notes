@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>组件参数教研与非props特性</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <child content="hello vue"></child>
+    </div>
+</body>
+<script>
+    Vue.component('child',{
+        props:{
+             content: {
+                type: String, //数据类型
+                required:true, //这个content父组件中必传
+                default:'default value', //如果required设置为false时 默认的值为default的值
+                validator:function(value){ //校验器 value是校验的内容 里面可以写函数
+                    return (value.length > 5)
+                }
+            }
+        },
+        template:"<div>childcomponent---{{content}}</div>"
+    })
+    var vm = new Vue({
+        el:'#app',
+
+    })
+</script>
+</html>
