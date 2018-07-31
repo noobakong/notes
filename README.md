@@ -1,4 +1,4 @@
-# Vue-去哪网开发
+# Vue
 ## 一、初识Vue
 ### 1.MVVM
 > 什么是MVVM？
@@ -505,10 +505,10 @@
         }
     })
 </script>
- ```
+```
 
     问题：以上，定义了一个counter的计数器组件，通过点击使得自己初始为0的number自增加1，此时，我们在页面中引进了两个counter组件，又想在下面的total数据中显示两个组件的number数字之和
-
+    
     实现：
     1.如代码定义counter组件，在methods的handleClick方法中 添加了 `this.$emit('change')`
 >this.$emit用于子组件向父组件传值， this.$emit('change') //当组件发生改变触发change 子组件向父组件传值
@@ -1125,3 +1125,16 @@ props是一个数组或对象，父子间传递的所有数据都要作为数组
 
 
 ### 6.vue的动画封装
+
+
+
+## 五、路由
+
+> 根据url的不同 给用户返回不同的页面
+>
+> router-view标签显示的是当前路由地址所对应的内容
+
+
+
+
+
