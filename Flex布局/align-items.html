@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>align-items</title>
+</head>
+<style>
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  .box-item1 {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    background-color: lightpink;
+  }
+
+  .box-item2 {
+    width: 50px;
+    height: 100px;
+    margin: 10px;
+    background-color: lightpink;
+  }
+
+  .box-item3 {
+    width: 50px;
+    height: 40px;
+    margin: 10px;
+    background-color: lightpink;
+  }
+  .box-noheight {
+    width: 50px;
+    margin: 10px;
+    background-color: lightpink;
+  }
+  .box {
+    width: 400px;
+    background-color: lightblue;
+    margin: 0 0 55px;
+    display: flex;
+  }
+  .boxb {
+    width: 400px;
+    height: 400px;
+    background-color: lightblue;
+    margin: 0 0 55px;
+    display: flex;
+  }
+  .font-big {
+    font-size: 30px;
+  }
+  .box1 {
+    align-items: flex-start;
+  }
+
+  .box2 {
+    align-items: flex-end;
+  }
+
+  .box3 {
+    align-items: center;
+  }
+
+  .box4 {
+    align-items: baseline;
+  }
+  .box5 {
+    align-items: stretch;
+  }
+</style>
+
+<body>
+  <h2>align-items</h2>
+  <h3>flex-start：交叉轴的起点对齐</h3>
+  <div class="box box1">
+    <div class="box-item1">1</div>
+    <div class="box-item2">2</div>
+    <div class="box-item3">3</div>
+  </div>
+
+  <h3>flex-end：交叉轴的终点对齐</h3>
+  <div class="box box2">
+    <div class="box-item1">1</div>
+    <div class="box-item2">2</div>
+    <div class="box-item3">3</div>
+  </div>
+
+  <h3>center：交叉轴的中点对齐</h3>
+  <div class="box box3">
+    <div class="box-item1">1</div>
+    <div class="box-item2">2</div>
+    <div class="box-item3">3</div>
+  </div>
+
+  <h3>baseline: 项目的第一行文字的基线对齐。</h3>
+  <div class="box box4">
+    <div class="box-item1 font-big">1</div>
+    <div class="box-item2">2</div>
+    <div class="box-item3">3</div>
+  </div>
+
+  <h3>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度</h3>
+  <div class="boxb box5">
+    <div class="box-noheight">1</div>
+    <div class="box-noheight">2</div>
+    <div class="box-noheight">3</div>
+  </div>
+</body>
+
+</html>

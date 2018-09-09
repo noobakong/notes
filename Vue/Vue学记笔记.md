@@ -1,7 +1,8 @@
 
 [TOC]
 
-#Vue-去哪网开发
+
+
 ##一、初识Vue
 ###1.MVVM
 > 什么是MVVM？
@@ -98,7 +99,7 @@
     })
 </script>
 ```
-![生命周期钩子执行](生命周期钩子执行.png)
+![生命周期钩子执行](http://pes1mlxa7.bkt.clouddn.com/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90%E6%89%A7%E8%A1%8C.png)
 
 > **注意：虽然vm.$destory()执行后页面中还有vm实例，并不是完全清空；但是此时的vm实例已经和页面断开连接，无法再使用vue更新视图**
 
@@ -779,13 +780,13 @@ props是一个数组或对象，父子间传递的所有数据都要作为数组
 
 
 
-![](f:\Users\孔小布\Documents\markdown笔记\vue动画原理.png)
+![](http://pes1mlxa7.bkt.clouddn.com/vue-%E5%8A%A8%E7%94%BB%E5%8E%9F%E7%90%86.png)
 
 
 
 **离开动画的过程图**
 
-![](f:\Users\孔小布\Documents\markdown笔记\vue动画原理2.png)
+![](http://pes1mlxa7.bkt.clouddn.com/vue-%E5%8A%A8%E7%94%BB%E5%8E%9F%E7%90%862.png)
 
 
 
@@ -986,7 +987,7 @@ props是一个数组或对象，父子间传递的所有数据都要作为数组
 
 **输出结果：**
 
-![](f:\Users\孔小布\Documents\markdown笔记\vue动画js钩子.jpg)
+![](http://pes1mlxa7.bkt.clouddn.com/vue-%E5%8A%A8%E7%94%BBjs%E9%92%A9%E5%AD%90.jpg)
 
 
 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex-direction</title>
+</head>
+<style>
+  h2,h3 {
+    text-align: center;
+  }
+  .box-item {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    background-color: lightpink;
+  }
+  .box {
+    background-color: lightblue;
+    margin: 0 0 55px;
+    display: flex;
+  }
+  .box1 {
+    flex-direction: row;
+  }
+  .box2 {
+    flex-direction: row-reverse;
+  }
+  .box3 {
+    flex-direction: column;
+  }
+  .box4 {
+    flex-direction: column-reverse;
+  }
+</style>
+<body>
+  <h2>flex-direction</h2>
+  <h3>row:  主轴为水平方向，起点在左端</h3>
+  <div class="box box1">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+  </div>
+  <h3>row-reverse：主轴为水平方向，起点在右端</h3>
+  <div class="box box2">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+  </div>
+  <h3>column：主轴为垂直方向，起点在上沿</h3>
+  <div class="box box3">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+  </div>
+  <h3>column-reverse：主轴为垂直方向，起点在下沿</h3>
+  <div class="box box4">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+  </div>
+</body>
+</html>

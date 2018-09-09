@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex-flow</title>
+</head>
+<style>
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  .box-item {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    background-color: lightpink;
+  }
+
+  .box {
+    width: 400px;
+    background-color: lightblue;
+    margin: 0 0 55px;
+    display: flex;
+  }
+  .box1 {
+    flex-flow: row-reverse wrap;
+  }
+</style>
+
+<body>
+  <h2>flex-flow</h2>
+  <div class="box box1">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+    <div class="box-item">4</div>
+    <div class="box-item">5</div>
+    <div class="box-item">6</div>
+    <div class="box-item">7</div>
+    <div class="box-item">8</div>
+    <div class="box-item">9</div>
+  </div>
+</body>
+
+</html>
