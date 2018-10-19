@@ -15,18 +15,18 @@
 ## 03-JavaScript
 
 - [JavaScript运行机制](03-JavaScript/01-JavaScript运行机制.md)
-- [prototype && __proto__](03-JavaScript/02-prototype && __proto__.md)
+- [prototype和__proto__.md](03-JavaScript/02-prototype和__proto__.md)
 - [JavaScript常见的几种继承](03-JavaScript/03-常见的几种继承.md)
 
 ## 04-ES6
 占坑
 
 ## 05-Vu
--  [vue基础知识1](05-Vue/vue基础知识1.md)
+-  [vue基础知识1](05-Vue/Vue基础知识1.md)
 
 
 ## 06-Node
-- [Module.exports和模块加载路径](06-Node/01-Module.exports和模块加载路径.md)
+- [01-Module.exports和模块加载路径](06-Node/01-Module.exports和模块加载路径.md)
 - [02-原生node实现留言板](06-Node/02-原生node实现留言板.md)
 - [03-express使用](06-Node/03-express使用.md)
 - [04-Mongodb相关(mongoose)](06-Node/04-Mongodb相关.md)
