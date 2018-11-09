@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // const arr = [1, 2, 3]
+    // function iterator(arr) {
+    //   let index = 0
+    //   return {
+    //     next: function () {
+    //       return index < arr.length ? 
+    //       {
+    //         value: arr[index++], 
+    //         done: false
+    //       } : 
+    //       {
+    //         value: undefined,
+    //         done: true
+    //       }
+    //     }
+    //   }
+    // }
+    // const it = iterator(arr)
+    // console.log(it.next())
+    // console.log(it.next())
+    // console.log(it.next())
+    // console.log(it.next())
+
+
+    // let arr = [1, 2, 3];
+    //   let iter = arr[Symbol.iterator]();
+
+    //   console.log(iter.next()) // { value: 'a', done: false }
+    //   console.log(iter.next()) // { value: 'b', done: false }
+    //   console.log(iter.next()) // { value: 'c', done: false }
+    //   console.log(iter.next()) // { value: undefined, done: true }
+
+    // const obj = {}
+    // console.log(obj[Symbol.iterator])
+
+    // function Obj(value) {
+    //   this.value = value
+    //   this.next = null
+    // }
+
+    // Obj.prototype[Symbol.iterator] = function() {
+    //   var iterator = {next: next}
+    //   var current = this
+
+    //   function next() {
+    //     if (current) {
+    //       var value = current.value
+    //       current = current.next
+    //       return {
+    //         value: value,
+    //         done: false
+    //       }
+    //     } else {
+    //       return {done: true}
+    //     }
+    //   }
+    //   return iterator
+    // }
+    // var one = new Obj(1);
+    // var two = new Obj(2);
+    // var three = new Obj(3);
+
+    // one.next = two;
+    // two.next = three;
+
+    // for (var i of one) {
+    //   console.log(i); // 1, 2, 3
+    // }
+
+
+    var obj = {
+      a: 1,
+      b: 2,
+      'me': 'akong',
+      'lover': 'xwr'
+    }
+
+    obj[Symbol.iterator] = function () {
+     let keys = Object.keys(obj)
+     let len = keys.length
+     let n = 0
+
+     return {
+       next: function() {
+         if (n < len) {
+           return {
+             value: keys[n++],
+             done: false
+           }
+         } else {
+           return {
+             done: true
+           }
+         }
+       }
+     }
+    }
+    
+    for (var attr of obj) {
+      console.log(attr)
+    }
+  </script>
+</body>
+</html>
