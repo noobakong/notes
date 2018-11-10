@@ -110,7 +110,7 @@ console.log(p1);
 
 上述代码很简单，我们使用Symbol函数创建一个Symbol值作为我们构造函数Person的一个属性，性别。
 
-![](http://pd92xwp9t.bkt.clouddn.com/image/notes/es6/Symbol1.png)
+![](https://blog-1257919906.cos.ap-guangzhou.myqcloud.com/image/notes/es6/Symbol1.png)
 
 
 

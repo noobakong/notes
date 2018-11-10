@@ -53,7 +53,7 @@ js这门语言在刚开始创造时，就是作为浏览器脚本语言，只要
 
 > 主线程从"任务队列"中读取事件，这个过程是循环不断的，所以整个的这种运行机制又称为Event Loop（事件循环）。
 
-![](http://pd92xwp9t.bkt.clouddn.com/image/notes/js-eventloop.png)
+![](https://blog-1257919906.cos.ap-guangzhou.myqcloud.com/image/notes/js-eventloop.png)
 
 主程序运行时，产生堆和栈，栈中的代码调用各位外部的WEBAPI，他们在任务队列中加入各种事件，如图中的Click，Load，Done。只要栈中的代码执行完毕，主线程就会去读取"任务队列"，依次执行那些事件所对应的回调函数。
 

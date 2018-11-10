@@ -2,7 +2,7 @@
 
 > 学习node，实现一个简单的留言板小demo
 
-![预览](http://pd92xwp9t.bkt.clouddn.com/image/notes/node-liuyanban.gif)
+![预览](https://blog-1257919906.cos.ap-guangzhou.myqcloud.com/image/notes/node-liuyanban.gif)
 
 
 

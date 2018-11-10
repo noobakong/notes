@@ -39,7 +39,7 @@ Flex 是 Flexible Box 的缩写，译为**弹性布局**，用来为盒模型提
 - `column`：主轴为垂直方向，起点在上沿。
 - `column-reverse`：主轴为垂直方向，起点在下沿。
 
-![](http://pd92xwp9t.bkt.clouddn.com/image/notes/flex-flex-direction.png)
+![](https://blog-1257919906.cos.ap-guangzhou.myqcloud.com/image/notes/flex-flex-direction.png)
 
 #### 2. flex-wrap属性
 
@@ -53,7 +53,7 @@ Flex 是 Flexible Box 的缩写，译为**弹性布局**，用来为盒模型提
 
 > 如图我们可以发现，默认的nowrap属性的优先级是高于我们设置的width的。
 
-![](http://pd92xwp9t.bkt.clouddn.com/image/notes/flex-flex-wrap.png)
+![](https://blog-1257919906.cos.ap-guangzhou.myqcloud.com/image/notes/flex-flex-wrap.png)
 
 #### 3. flex-flow
 
@@ -77,7 +77,7 @@ Flex 是 Flexible Box 的缩写，译为**弹性布局**，用来为盒模型提
 - `space-between`：两端对齐，项目之间的间隔都相等。
 - `space-around`：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
 
-![](http://pd92xwp9t.bkt.clouddn.com/image/notes/flex-justify-content.png)
+![](https://blog-1257919906.cos.ap-guangzhou.myqcloud.com/image/notes/flex-justify-content.png)
 
 #### 5. align-items属性 
 
@@ -93,7 +93,7 @@ Flex 是 Flexible Box 的缩写，译为**弹性布局**，用来为盒模型提
 
 > 下图示例是的垂直纵轴方向是由上到下
 
-![](http://pd92xwp9t.bkt.clouddn.com/image/notes/flex-align-items.png)
+![](https://blog-1257919906.cos.ap-guangzhou.myqcloud.com/image/notes/flex-align-items.png)
 
 #### 6. align-content属性
 
@@ -110,7 +110,7 @@ Flex 是 Flexible Box 的缩写，译为**弹性布局**，用来为盒模型提
 - `space-around`：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。
 - `stretch`（默认值）：轴线占满整个垂直轴。
 
-![](http://pd92xwp9t.bkt.clouddn.com/image/notes/flex-align-content.png)
+![](https://blog-1257919906.cos.ap-guangzhou.myqcloud.com/image/notes/flex-align-content.png)
 
 ### 四. item成员的属性
 
@@ -148,4 +148,4 @@ Flex 是 Flexible Box 的缩写，译为**弹性布局**，用来为盒模型提
 
 `align-self`属性允许单个项目有与其他项目不一样的对齐方式，可覆盖
 
-![](http://pd92xwp9t.bkt.clouddn.com/image/notes/flex-item.png)
+![](https://blog-1257919906.cos.ap-guangzhou.myqcloud.com/image/notes/flex-item.png)

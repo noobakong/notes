@@ -59,7 +59,7 @@ Iterator 遍历器就是这样一种机制，它是一种接口，为各种不�
 
 执行结果如下图：
 
-![iterator](http://pd92xwp9t.bkt.clouddn.com/image/notes/es6/iterator1.png)
+![iterator](https://blog-1257919906.cos.ap-guangzhou.myqcloud.com/image/notes/es6/iterator1.png)
 
 ## Symbol.iterator属性
 
@@ -87,7 +87,7 @@ iter.next() // { value: 'c', done: false }
 iter.next() // { value: undefined, done: true }
 ```
 
-![iterator](http://pd92xwp9t.bkt.clouddn.com/image/notes/es6/iterator1.png)
+![iterator](https://blog-1257919906.cos.ap-guangzhou.myqcloud.com/image/notes/es6/iterator1.png)
 
 ## 给对象添加Symbol.iterator属性
 

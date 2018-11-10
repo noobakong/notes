@@ -21,13 +21,13 @@ foo = new Foo ()
 
 上面代码创造了一个构造函数，并new了一个Foo的实例foo，我们可以在控制台打印下面代码
 
-![1536647396354](http://pd92xwp9t.bkt.clouddn.com/image/notes/js-%E5%8E%9F%E5%9E%8B2.png)
+![1536647396354](https://blog-1257919906.cos.ap-guangzhou.myqcloud.com/image/notes/js-%E5%8E%9F%E5%9E%8B2.png)
 
 可以很明显看到，Foo构造函数是一个function，而foo实例和Foo.prototype原型对象都是对象
 
 ###  2. 关系示意图
 
-![](http://pd92xwp9t.bkt.clouddn.com/image/notes/js-%E5%8E%9F%E5%9E%8B1.jpg)
+![](https://blog-1257919906.cos.ap-guangzhou.myqcloud.com/image/notes/js-%E5%8E%9F%E5%9E%8B1.jpg)
 
 
 
