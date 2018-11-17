@@ -1,5 +1,3 @@
-# Promise,generator,async
-
 ## 一、Promise
 
 所谓Promise，像是一个容器，里面车有房者某个未来才会结束的事件，通常是一个异步操作的结果。
