@@ -8,9 +8,8 @@
 
 ## 02-CSS
 
-### Flex布局
-
-- [读阮一峰flex学习笔记](./02-CSS/01-Flex布局/阮一峰flex学习笔记.md)
+- [读阮一峰flex学习笔记](./02-CSS/01-flex学习笔记.md)
+- [三栏布局相关总结](./02-CSS/02-页面布局.md)
 
 ## 03-JavaScript
 
