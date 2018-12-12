@@ -16,6 +16,7 @@
 - [JavaScript运行机制](./03-JavaScript/01-JavaScript运行机制.md)
 - [prototype和__proto__.md](./03-JavaScript/02-prototype和__proto__.md)
 - [JavaScript常见的几种继承](./03-JavaScript/03-常见的几种继承.md)
+- [原型链相关内容](./03-JavaScript/04-原型链相关内容.md)
 
 ## 04-ES6
 - [01-Symbol](./04-ES6/01-Symbol.md)
