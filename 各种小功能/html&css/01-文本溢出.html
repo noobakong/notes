@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  .oneline {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .manyline {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+</style>
+<body>
+  <!-- 单行文本溢出 -->
+  <div class="oneline">
+    世界很小我陪你去到天涯海角在没有烦恼的角落里停止寻找在无忧无虑的时光里慢慢变老
+  </div>
+
+  <!-- 多行文本溢出 -->
+  <div class="manyline">
+    世界很小我陪你去到天涯海角在没有烦恼的角落里停止寻找在无忧无虑的时光里慢慢变老，世界很小我陪你去到天涯海角在没有烦恼的角落里停止寻找在无忧无虑的时光里慢慢变老，世界很小我陪你去到天涯海角在没有烦恼的角落里停止寻找在无忧无虑的时光里慢慢变老，世界很小我陪你去到天涯海角在没有烦恼的角落里停止寻找在无忧无虑的时光里慢慢变老
+  </div>
+  <!-- 
+    -webkit-line-clamp用来限制在一个块元素显示的文本的行数。 为了实现该效果，它需要组合其他的WebKit属性。常见结合属性：
+    display: -webkit-box; 必须结合的属性 ，将对象作为弹性伸缩盒子模型显示 。
+    -webkit-box-orient 必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式 。
+   -->
+</body>
+</html>

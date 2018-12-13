@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function type(target) {
+        var ret = typeof (target);
+        var template = {
+          "[object Array]": "array",
+          "[object Object]": "object",
+          "[object Number]": "number - object",
+          "[object Boolean]": "boolean - object",
+          "[object String]": 'string-object'
+        }
+
+        if (target === null) {
+          return 'null';
+        } else if (ret == "object") {
+          var str = Object.prototype.toString.call(target);
+          return template[str];
+        } else {
+          return ret;
+        }
+      }
+  </script>
+</body>
+</html>
