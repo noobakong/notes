@@ -17,6 +17,7 @@
 - [prototype和__proto__.md](./03-JavaScript/02-prototype和__proto__.md)
 - [JavaScript常见的几种继承](./03-JavaScript/03-常见的几种继承.md)
 - [原型链相关内容](./03-JavaScript/04-原型链相关内容.md)
+- [call apply bind](./03-JavaScript/05-call,apply,bind.md)
 
 ## 04-ES6
 - [01-Symbol](./04-ES6/01-Symbol.md)
@@ -30,6 +31,7 @@
 
 ## 05-Vu
 -  [01-vue基础知识](./05-Vue/01-Vue基础知识.md)
+-  [02-vue父子组件和bus总线传值](./05-Vue/02-Vue的简单传值.md)
 
 
 ## 06-Node
@@ -37,6 +39,11 @@
 - [02-原生node实现留言板](./06-Node/02-原生node实现留言板.md)
 - [03-express使用](./06-Node/03-express使用.md)
 - [04-Mongodb相关(mongoose)](./06-Node/04-Mongodb相关.md)
+
+## 07-HTTP|网络
+- [cookies-session-sessionStorage-localStorage](./07-HTTP/cookies-session-sessionStorage-localStorage.md)
+- [前端安全](./07-HTTP/前端安全.md)
+- [前端通讯](./07-HTTP/前端通讯.md)
 
 ## Js算法
 - [01-数组去重](./Js算法/01-数组去重.md)
