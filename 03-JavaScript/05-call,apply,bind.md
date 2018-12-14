@@ -176,7 +176,7 @@ Function.prototype.myApply = function (context) {
 ```javascript
     Function.prototype.myBind = function (thisArg) {
         if (typeof this !== 'function') {
-          throw new TypeError('Error')
+          throw new Error("error")
         }
         var _self = this
         var args = [...arguments].slice(1)
@@ -188,10 +188,8 @@ Function.prototype.myApply = function (context) {
           return _self.apply(_this, args.concat([...arguments]))
         }
         // 维护原型关系
-        if (this.prototype) {
-          // 将空对象的原型指向调用函数的原型
-          fnNop.prototype = this.prototype;
-        }
+        // 将空对象的原型指向调用函数的原型
+        fnNop.prototype = this.prototype;
         // 然后又将fnBound的原型指向一个新的FNOP实例
         // 这个步骤完成了给fnBound拷贝一个FNOP的prototype即this/foo的prototype。
         // 其实这几句就相当于fBound.prototype = Object.create(this.prototype); 
@@ -199,6 +197,8 @@ Function.prototype.myApply = function (context) {
         return fnBound;
       }
 ```
+
+bind这里很绕，牵扯到很多原型链和作用域的问题，详细可以参考一篇博文 [JavaScript深入之bind的模拟实现](https://github.com/mqyqingfeng/Blog/issues/12)
 
 ## 黑魔法
 

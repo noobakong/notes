@@ -101,7 +101,7 @@
         var fnNop = function () { } // 定义一个空函数
         var fnBound = function () {
           // 判断是否可以当做构造函数使用
-          var _this = this instanceof _self ? this : thisArg
+          var _this = this instanceof fnBound ? this : thisArg
 
           return _self.apply(_this, args.concat([...arguments]))
         }
@@ -110,12 +110,13 @@
           // 将空对象的原型指向调用函数的原型
           fnNop.prototype = this.prototype;
         }
+        // fBound.prototype = this.prototype
         // 然后又将fnBound的原型指向一个新的FNOP实例
-        // 这个步骤完成了给fnBound拷贝一个FNOP的prototype即this/foo的prototype。其实这几句就相当于fBound.prototype = Object.create(this.prototype); 
+        // 这个步骤完成了给fnBound拷贝一个FNOP的prototype即this/foo的prototype。
+        // 其实这几句就相当于fBound.prototype = Object.create(this.prototype); 
         fnBound.prototype = new fnNop();
         return fnBound;
       }
-
   </script>
 </body>
 </html>
