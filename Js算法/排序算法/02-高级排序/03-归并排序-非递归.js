@@ -32,6 +32,7 @@ function insertionSort(arr) {
   return arr
 }
 
+
 // 两组的归并操作
 function __merge(arr, l, mid, r) {
   let aux = new Array(r - l + 1)
@@ -54,6 +55,7 @@ function __merge(arr, l, mid, r) {
   }
 }
 
+
 // 自底向上的归并排序
 function mergeSortBottomToUp (arr) {
   var len = arr.length
@@ -69,6 +71,8 @@ function mergeSortBottomToUp (arr) {
     }
   }
 }
+
+
 
 
 // 自然归并排序
@@ -109,14 +113,9 @@ function naturallyMergeSort (arr) {
   return arr
 }
 
-// let arr = [1, 5, 2, 3, 6, 0, 7, 4, 8]
 
 
-// let arr = util.randomArray(500000, 0, 50000)
-// // let arr1 = arr.slice()
-// // util.testSort('归并BU', mergeSortBottomToUp, arr)
-// util.testSort('自然归并', naturallyMergeSort, arr)
-
+// 归并算法 中的 StrandSort
 function StrandSort (arr) {
   let aux = [[arr[0]]]
   let times = 0
@@ -151,6 +150,7 @@ function StrandSort (arr) {
   return aux[0]
 }
 
+// StrandSort的merge函数
 function __merge2(arr1,arr2) {
   let aux = new Array(arr1.length + arr2.length)
   let i = 0 
@@ -170,15 +170,12 @@ function __merge2(arr1,arr2) {
   return aux
 }
 
-// console.log(StrandSort([ 0, 1, 2, 5, 4, 5 ]))
 let arr = util.randomArray(100000, 0, 1000)
 let arr1 = arr.slice()
-// console.log(StrandSort([1, 1, 0, 0, 4]))
-// util.testSort('归并BU', mergeSortBottomToUp, arr)
-util.testSort('自然归并', naturallyMergeSort, arr)
-// util.testSort('strandSort',StrandSort , arr)
+// util.testSort('插入排序',insertionSort , arr)
+// util.testSort('自底向上归并', mergeSortBottomToUp, arr)
+// util.testSort('自然归并', naturallyMergeSort, arr)
+
 // let res = StrandSort(arr)
-// console.log(res)
-// console.log(isSorted(res))
 // testSort('strandsort',StrandSort,arr)
-// util.testSort('charu',insertionSort , arr)
+// console.log(isSorted(res))
