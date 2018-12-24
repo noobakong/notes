@@ -170,12 +170,12 @@ function __merge2(arr1,arr2) {
   return aux
 }
 
-let arr = util.randomArray(100000, 0, 1000)
+let arr = util.randomArray(50000, 0, 1000)
 let arr1 = arr.slice()
 // util.testSort('插入排序',insertionSort , arr)
 // util.testSort('自底向上归并', mergeSortBottomToUp, arr)
 // util.testSort('自然归并', naturallyMergeSort, arr)
 
 // let res = StrandSort(arr)
-// testSort('strandsort',StrandSort,arr)
+testSort('strandsort',StrandSort,arr)
 // console.log(isSorted(res))

@@ -109,9 +109,14 @@ function __insertionSort(arr,l,r) {
   // return arr
 }
 
-let arr = util.randomArray(50000,0,1000)
+// let arr = util.randomArray(50000,0,1000)
+// let arr1 = arr.slice()
+// let arr2 = arr.slice()
+
+let arr = util.generateNearlyOrderedArray(50000, 10)
 let arr1 = arr.slice()
 let arr2 = arr.slice()
 
-// // util.testSort('归并', mergeSort, arr1)
+
+util.testSort('基于插入排序优化的归并排序', mergeSort, arr1)
 // util.testSort('插入', insertionSort, arr2)

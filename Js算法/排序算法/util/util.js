@@ -43,15 +43,12 @@ module.exports = {
 
   // 测试算法执行时间函数
   testSort: function(sortName, sortFn, arr) {
-    // let startTime = Date.now();
     console.time(sortName);
     sortFn(arr);
-    // let endTime = Date.now();
     console.timeEnd(sortName);
     if (!this.isSorted(arr)) {
       throw new Error('排序出错！');
     }
-    // console.log(`${sortName}执行时间: ${endTime - startTime}ms`);
   },
   isSorted: function (arr) {
     for (let i=0; i<arr.length - 1; i++) {
