@@ -1,10 +1,12 @@
 const util = require('../util/util')
 
+/* 测试性能 */
 function testSort (sortName, sortFn, arr) {
   console.time(sortName);
   sortFn(arr);
   console.timeEnd(sortName);
 }
+/* 测试正确性 */
 function isSorted (arr) {
   for (let i = 0; i < arr.length - 1; i++) {
     if (arr[i] > arr[i + 1])
@@ -13,19 +15,21 @@ function isSorted (arr) {
   return true
 }
 
-function insertionSort(arr, l, r) {
+/* 插入排序 */
+function insertionSort(arr) {
   // 默认第一个位置与自己相比已经有序，i从1开始而不是0
-  for (let z = l; z <= r; z++) {
+  for (let i = 1; i < arr.length; i++) {
     // 取一份待插入数的备份
-    let e = arr[z]
+    let e = arr[i]
     // j保存元素e应该插入的位置
     let j
-    for (j = z; j > l && e < arr[j - 1]; j--) {
+    // 判断j-1的位置是否仍然比e大 
+    for (j = i; j > 0 && e < arr[j - 1]; j--) {
       arr[j] = arr[j - 1]
     }
     arr[j] = e
   }
-  // return arr
+  return arr
 }
 
 // 两组的归并操作
@@ -167,14 +171,14 @@ function __merge2(arr1,arr2) {
 }
 
 // console.log(StrandSort([ 0, 1, 2, 5, 4, 5 ]))
-let arr = util.randomArray(10000, 0, 5)
+let arr = util.randomArray(100000, 0, 1000)
 let arr1 = arr.slice()
 // console.log(StrandSort([1, 1, 0, 0, 4]))
 // util.testSort('归并BU', mergeSortBottomToUp, arr)
-// util.testSort('自然归并', naturallyMergeSort, arr)
+util.testSort('自然归并', naturallyMergeSort, arr)
 // util.testSort('strandSort',StrandSort , arr)
-let res = StrandSort(arr)
-console.log(res)
-console.log(isSorted(res))
-
+// let res = StrandSort(arr)
+// console.log(res)
+// console.log(isSorted(res))
 // testSort('strandsort',StrandSort,arr)
+// util.testSort('charu',insertionSort , arr)

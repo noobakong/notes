@@ -1,11 +1,29 @@
 const util = require('../util/util')
 
+// 插入排序算法
+function insertionSort(arr) {
+  // 默认第一个位置与自己相比已经有序，i从1开始而不是0
+  for (let i = 1; i < arr.length; i++) {
+    // 取一份待插入数的备份
+    let e = arr[i]
+    // j保存元素e应该插入的位置
+    let j
+    for (j = i; j > 0 && e < arr[j - 1]; j--) {
+      arr[j] = arr[j - 1]
+    }
+    arr[j] = e
+  }
+  return arr
+}
+
 // 入口函数
 function mergeSort (arr) {
   __mergeSort(arr,0,arr.length-1)
   return arr
 }
 
+
+// 一代归并
 // // 递归使用归并排序，对arr[l...r]的范围进行排序
 // function __mergeSort(arr,l,r) {
 //   // 递归出口
@@ -20,6 +38,7 @@ function mergeSort (arr) {
 // }
 
 
+// 二代归并
 // 改进 增加merge条件
 // function __mergeSort(arr, l, r) {
 //   if (l >= r) {
@@ -33,13 +52,15 @@ function mergeSort (arr) {
 //     __merge(arr, l, mid, r)
 // }
 
+
+// 三代归并
 // 改进递归到底使用插入排序
 function __mergeSort(arr, l, r) {
   // if (l >= r) {
   //   return
   // }
   if (r-l<=15) {
-    insertionSort(arr,l,r)
+    __insertionSort(arr,l,r)
     return
   }
   let mid = Math.floor((l + r) / 2)
@@ -72,7 +93,8 @@ function __merge(arr,l,mid,r) {
   }
 }
 
-function insertionSort(arr,l,r) {
+// 归并优化使用的插入排序
+function __insertionSort(arr,l,r) {
   // 默认第一个位置与自己相比已经有序，i从1开始而不是0
   for (let i = l; i <=r; i++) {
     // 取一份待插入数的备份
@@ -87,15 +109,9 @@ function insertionSort(arr,l,r) {
   // return arr
 }
 
-// let arr = util.randomArray(50000,0,1000)
-// let arr1 = arr.slice()
-// let arr2 = arr.slice()
-
-// util.testSort('归并', mergeSort, arr1)
-// util.testSort('插入', insertionSort, arr2)
-let arr = util.randomArray(500000, 0,10000)
+let arr = util.randomArray(50000,0,1000)
 let arr1 = arr.slice()
 let arr2 = arr.slice()
 
-util.testSort('归并', mergeSort, arr1)
+// // util.testSort('归并', mergeSort, arr1)
 // util.testSort('插入', insertionSort, arr2)
