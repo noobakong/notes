@@ -46,15 +46,29 @@ module.exports = {
     console.time(sortName);
     sortFn(arr);
     console.timeEnd(sortName);
-    if (!this.isSorted(arr)) {
+    if (!isSorted(arr)) {
       throw new Error('排序出错！');
     }
   },
-  isSorted: function (arr) {
-    for (let i=0; i<arr.length - 1; i++) {
-      if (arr[i] > arr[i+1])
-        return false
+
+  // Onlogn级别的算法到底时采用的插入排序优化
+  innerInsertionSort: function (arr, l, r) {
+    for (let i = l; i <= r; i++) {
+      let e = arr[i]
+      let j
+      for (j = i; j > l && e < arr[j - 1]; j--) {
+        arr[j] = arr[j - 1]
+      }
+      arr[j] = e
     }
-    return true
   }
+}
+
+
+function isSorted (arr) {
+  for (let i=0; i<arr.length - 1; i++) {
+    if (arr[i] > arr[i+1])
+      return false
+  }
+  return true
 }
