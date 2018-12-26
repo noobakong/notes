@@ -8,9 +8,23 @@ function quickSort (arr) {
   return arr
 }
 
+/*---------- 初版快排 -------*/
+// function __quickSort(arr,l,r) {
+//   // 递归出口
+//   if (l>=r) {
+//     return
+//   }
+//   // 使用分割来获取中间元素的位置
+//   let p = __partition(arr,l,r)
+//   __quickSort(arr,l,p-1)
+//   __quickSort(arr,p+1,r)
+// }
+
+/*---------- 第二版快排 插入排序优化 -------*/
 function __quickSort(arr,l,r) {
   // 递归出口
-  if (l>=r) {
+  if (r-l<=15) {
+    util.innerInsertionSort(arr,l,r)
     return
   }
   // 使用分割来获取中间元素的位置
@@ -23,7 +37,6 @@ function __quickSort(arr,l,r) {
 // 返回p arr[l...p-1] < arr[p]  arr[p+1,r] > arr[p]
 function __partition(arr,l,r) {
   let v = arr[l]
-
   // 这样定义j 就满足了 arr[l+1...j] 和 arr[j+1...i) 刚开始时都不存在
   let j = l
   for(let i=l+1; i<=r;i++) {
@@ -38,7 +51,12 @@ function __partition(arr,l,r) {
 }
 
 
-let arr = util.randomArray(50000,0,10000)
+// let arr = util.randomArray(500000,0,10000)
+// let arr1 = arr.slice()
+// util.testSort('归并排序', all.mergeSort,arr)   
+// util.testSort('快速排序', quickSort, arr1)
+
+let arr = util.generateNearlyOrderedArray(500000, 10)
 let arr1 = arr.slice()
-util.testSort('归并排序', all.mergeSort,arr)   
+// util.testSort('归并排序', all.mergeSort, arr)
 util.testSort('快速排序', quickSort, arr1)
