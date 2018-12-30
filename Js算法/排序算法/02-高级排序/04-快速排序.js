@@ -124,7 +124,7 @@ function __partition(arr, l, r) {
 // util.testSort('归并排序', all.mergeSort, arr)
 // util.testSort('快速排序', quickSort, arr1)
 
-let arr = util.randomArray(50000,0,10)
+let arr = util.randomArray(10000000, 0, 100000)
 let arr1 = arr.slice()
 util.testSort('归并排序', all.mergeSort,arr)   
 util.testSort('快速排序', quickSort, arr1)
