@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>垂直居中相关</title>
+</head>
+<body>
+  <!-- 单行文本 行高 -->
+  <section>
+    <style>
+      .div1 {
+        height: 100px;
+        line-height: 100px;
+        background: lightblue;
+      }
+    </style>
+    <div class="div1">
+      <span>阿孔要加油呀啊</span>
+    </div>
+  </section>
+  <!-- 内边距 
+    当容器的上下内边距相同的时候，容器的内容就是垂直居中了 容器不能有固有高度，高度由内容撑起来
+  -->
+  <section>
+    <style>
+      .div2 {
+        padding: 50px 0;
+        background: lightcoral;
+      }
+    </style>
+    <div class="div2">
+      <span>akong加油啊</span>
+    </div>
+  </section>
+  <!-- 表格布局 -->
+  <section>
+    <style>
+      .div3 {
+        display: table;
+        background: lightcyan;
+        height: 100px;
+        width: 100%;
+      }
+      .div3>span {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    </style>
+    <div class="div3">
+      <span>阿孔加油啊--表格布局</span>
+    </div>
+  </section>
+  <!-- 定位 和水平居中相似-->
+  <section>
+    <style>
+      .div4 {
+        height: 200px;
+        position: relative;
+        background: lightgreen;
+      }
+      .div4>div {
+        position: absolute;
+        top: 50%;
+        width: 100px;
+        height: 100px;
+        background: lightgoldenrodyellow;
+        transform: translateY(-50%)
+      }
+    </style>
+    <div class="div4">
+      <div>aaaa加油！</div>
+    </div>
+  </section>
+  <!-- 伸缩盒 -->
+  <section>
+    <style>
+      .div5{
+        display: flex;
+        align-items:center;
+        height: 100px;
+        background: lightpink;
+      }
+    </style>
+    <div class="div5">
+      <span>啊啊啊</span>
+    </div>
+  </section>
+</body>
+</html>
