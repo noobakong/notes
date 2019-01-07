@@ -103,7 +103,7 @@ function __partition(arr, l, r) {
   let j = r
   while(true) {
     while(i<=r&&arr[i]<v) i++
-    while(r>=l+1&&arr[j]>v) j--
+    while(j>=l+1&&arr[j]>v) j--
     if(i>j) break
     util.swap(arr,i,j)
     i++
